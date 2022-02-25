@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .body-text {
+    @apply text-sm leading-5 tracking-wide text-gray-500;
+  }
+  .title {
+    @apply text-2xl  text-indigo-600;
+  }
+  .badge {
+    @apply px-1 py-1 text-sm;
+  }
+
+  .btn {
+    @apply inline-flex items-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 dark:bg-gray-200 dark:text-black dark:hover:bg-white dark:focus:ring-gray-200 dark:focus:ring-offset-black;
+  }
+}
