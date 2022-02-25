@@ -38,7 +38,8 @@ const skills = [
       'Webpack',
       'Flexbox',
       'Nex.js',
-      'Mobile Design',
+      'Responsive Design',
+      'GraphQL',
     ],
   },
   {
