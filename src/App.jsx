@@ -117,8 +117,9 @@ const experiences = [
     role: 'Software Engineer',
     duration: '11/2021 - 06/2021',
     contents: [
+      'Lead the front-end team to develop a user-friendly web application with JavaScript, CSS3 for managing 6000+ NAPA stores across the US and Mexico',
       'Develop and maintain the core of the product, including the frontend and backend.',
-      'Developed web services with Java, Spring, and Oracle',
+      'Develop and test web services with Java, Spring, and Oracle',
       'Work closely with clients to gather requirements and manage website development from initial design through completion',
     ],
     technologies: ['Javascript', 'React', 'CSS3', 'AngularJS', 'Redis'],
@@ -134,7 +135,6 @@ const experiences = [
       'Develop and maintain controllers, services, views using Spring MVC framework.',
       'Develop and maintain customer note widget on client service console to manage notes',
       'Write migration script in BeanShell to migrate data between different resources.',
-      'Design and implement interactive and responsive web application using standard web technologies',
     ],
   },
   {
