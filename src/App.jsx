@@ -115,7 +115,7 @@ const experiences = [
     company: 'Genuine Parts Company',
     companyUrl: 'https://www.genpt.com/',
     role: 'Software Engineer',
-    duration: '11/2021 - 06/2021',
+    duration: '11/2014 - 06/2021',
     contents: [
       'Lead the front-end team to develop a user-friendly web application with JavaScript, CSS3 for managing 6000+ NAPA stores across the US and Mexico',
       'Develop and maintain the core of the product, including the frontend and backend.',
@@ -128,7 +128,7 @@ const experiences = [
     company: 'Purchasing Power',
     companyUrl: 'https://www.purchasingpower.com/',
     role: 'Software Engineer',
-    duration: '05/2014 - 10/2014',
+    duration: '05/2014 - 11/2014',
     contents: [
       'Develop and maintain an online J2EE B2C shopping web application using Hybris eCommerce Suite',
       'Develop backend management consoles for product, order, payment and client service.',
@@ -254,7 +254,9 @@ function App() {
                 <span className="w-[500px] text-sm font-medium">
                   {edu.degree}
                 </span>
-                <span className="text-sm text-gray-500">{edu.school}</span>
+                <span className="text-sm text-gray-500 print:text-gray-700">
+                  {edu.school}
+                </span>
                 <span className="ml-auto text-sm font-medium">
                   {edu.graduation}
                 </span>
