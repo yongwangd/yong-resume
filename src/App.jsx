@@ -2,6 +2,15 @@ import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const highlights = [
+  '10 years experience in software development',
+  'Expert in Front End development',
+  'Great problem solving and debugging skills',
+  'Experience in designing and building large scale projects',
+  'Like challenges and new technologies',
+  'Experience with mentoring new Engineers',
+];
+
 const summary =
   '10+ years’ experience in software development, encompassing a wide range of technologies. Proficient with web development with JavaScript, CSS and HTML5, also very strong at backend and database development. Using design and code to solve work and real-life problems is what I am passionated about.';
 
@@ -44,15 +53,15 @@ const skills = [
   {
     category: 'Backend',
     technologies: [
-      'NodeJS',
-      'Express',
+      'Node',
+      'Google Cloud',
       'Java',
       'Spring',
       'Spring MVC',
       'Hibernate',
       'Kafka',
       'Python',
-      'Rest API',
+      'Rest',
     ],
   },
   {
@@ -60,9 +69,10 @@ const skills = [
     technologies: [
       'SQL Server',
       'MySQL',
-      'SqLite',
       'Firebase',
+      'PostgreSQL',
       'MongoDB',
+      'ElasticSearch',
       'Redis',
     ],
   },
@@ -70,8 +80,6 @@ const skills = [
     category: 'Tools',
     technologies: [
       'Linux',
-      'MacOS',
-      'Windows',
       'bash',
       'Git',
       'Nginx',
@@ -79,8 +87,6 @@ const skills = [
       'Docker',
       'Kubernetes',
       'CI/CD',
-      'Vim',
-      'Emacs',
     ],
   },
 ];
@@ -92,10 +98,9 @@ const experiences = [
     role: 'Senior Software Engineer',
     duration: '06/2021 - Present',
     contents: [
-      '​​BetterCloud is the first SaaS Operations Management platform, empowering IT for continuous event monitoring, quickly remediating threats, and fully-automated policy enforcement',
       'Lead the front-end development and build a modern react based web application with TailwindCSS, Context API from group up',
       'Actively participate in the design and implementation of a scalable, high-availability backend system',
-      'Mentoring and training junior engineers on technologies and system design',
+      'Interviewing new Engineers. Mentoring and coaching junior engineers on technologies and system design',
       'Primary Engineer representative for product demos and Q&A sessions',
     ],
     technologies: [
@@ -117,8 +122,9 @@ const experiences = [
     role: 'Software Engineer',
     duration: '11/2014 - 06/2021',
     contents: [
-      'Lead the front-end team to develop a user-friendly web application with JavaScript, CSS3 for managing 6000+ NAPA stores across the US and Mexico',
-      'Develop and maintain the core of the product, including the frontend and backend.',
+      'Lead the front-end team to develop a user-friendly web application with JavaScript, CSS3 for managing 6000+ NAPA stores',
+      'Designed and implemented a Bulk Editing feature that saved company millions of dollars every year',
+      'Interviewing and mentoring new engineers',
       'Develop and test web services with Java, Spring, and Oracle',
       'Work closely with clients to gather requirements and manage website development from initial design through completion',
     ],
@@ -131,10 +137,8 @@ const experiences = [
     duration: '05/2014 - 11/2014',
     contents: [
       'Develop and maintain an online J2EE B2C shopping web application using Hybris eCommerce Suite',
-      'Develop backend management consoles for product, order, payment and client service.',
-      'Develop and maintain controllers, services, views using Spring MVC framework.',
-      'Develop and maintain customer note widget on client service console to manage notes',
       'Write migration script in BeanShell to migrate data between different resources.',
+      'Responsible in troubleshooting production issues in early stage of the product release',
     ],
   },
   {
@@ -145,11 +149,19 @@ const experiences = [
     contents: [
       'Designing and developing projects using MS SQL Server 2012 (80%), Oracle (10%) and C#.NET(10%) ',
       'Write, maintain and debug C# code, SQL stored procedures, functions, views, indexes to support backend logic',
-      'Performance tuning on existing stored procedures. Made several stored procedures at least 5 times faster',
-      'Improve two projects performance by 75% by redesigning database structure and work flows',
-      'Experience with SSIS packages and data warehousing ',
+      'Performance tuning on existing stored procedures. Reduced the execution time of the most frequently used stored procedures by 70%',
       'Configuration of Linked Server, SQL Agent, and replication between SQL Server and Oracle',
-      'Responsible in troubleshooting production issues in early stage of the product release',
+    ],
+  },
+  {
+    company: 'East Tennessee State University',
+    companyUrl: 'https://www.symphonyhealth.com/',
+    role: 'Graduate Research Assistant',
+    duration: '08/2011 - 5/2013',
+    contents: [
+      'Design and develop a web application with my Professor and his team to track activities of faculties',
+      'Use xPath and XSLT to transform XML data into HTML',
+      'Use SQL Server to store and retrieve data in XML format with XML schema',
     ],
   },
 ];
@@ -242,9 +254,17 @@ function App() {
             </div>
           </section>
         )}
-        <section className="mt-8 flex flex-col">
+        <section className="mt-8 hidden flex-col">
           <div className="title">Summary</div>
           <p className="body-text mt-2">{summary}</p>
+        </section>
+        <section className="mt-8 flex flex-col">
+          <div className="title">Summary</div>
+          <ul className="body-text mx-4 mt-2 grid grid-cols-2 font-medium text-gray-700">
+            {highlights.map(it => (
+              <li className="list-disc">{it}</li>
+            ))}
+          </ul>
         </section>
         <section className="mt-8 flex flex-col">
           <div className="title">Education</div>
@@ -265,16 +285,16 @@ function App() {
           </div>
         </section>
         <section className="skills mt-8 flex flex-col">
-          <div className="title">Skills</div>
+          <div className="title">Technologies</div>
           <div className="flex flex-col gap-1">
             {skills.map(skill => (
               <div className="mt-2 flex gap-1">
                 <div className="w-[100px] shrink-0 text-sm font-bold text-gray-800">
                   {skill.category}
                 </div>
-                <div className="flex flex-wrap gap-x-4 gap-y-2">
+                <div className="flex flex-wrap gap-x-4 gap-y-2 print:gap-x-2">
                   {skill.technologies.map(tech => (
-                    <div className="rounded bg-indigo-50 px-2 py-[2px] text-sm text-indigo-600">
+                    <div className="rounded bg-indigo-50 px-2 py-[2px] text-sm text-indigo-600 print:bg-white print:font-medium">
                       {tech}
                     </div>
                   ))}
@@ -289,7 +309,7 @@ function App() {
             {experiences.map(exp => (
               <div className="flex flex-col">
                 <div className="flex items-center justify-between">
-                  <span className="text-base font-medium text-gray-800">
+                  <span className="text-base font-medium text-gray-800 print:font-semibold">
                     {exp.role}
                   </span>
                   <a

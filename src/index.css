@@ -4,7 +4,7 @@
 
 @layer components {
   .body-text {
-    @apply text-sm leading-5 tracking-wide text-gray-500;
+    @apply text-sm leading-5 tracking-wide text-gray-500 print:text-gray-800;
   }
   .title {
     @apply text-2xl  text-indigo-600;
