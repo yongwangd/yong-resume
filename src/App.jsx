@@ -22,7 +22,7 @@ const educations = [
   },
   {
     school: 'Shanghai University of Electric Power',
-    degree: 'Bachelor Degree in Computer Science',
+    degree: "Bachelor's Degree in Computer Science",
     graduation: 'June 2011',
   },
 ];
@@ -77,8 +77,9 @@ const skills = [
     ],
   },
   {
-    category: 'Tools',
+    category: 'Others',
     technologies: [
+      'System Design',
       'Linux',
       'bash',
       'Git',
@@ -95,7 +96,7 @@ const experiences = [
   {
     company: 'BetterCloud',
     companyUrl: 'https://www.bettercloud.com/',
-    role: 'Senior Software Engineer',
+    role: 'Software Engineer III',
     duration: '06/2021 - Present',
     contents: [
       'Lead the front-end development and build a modern react based web application with TailwindCSS, Context API from group up',
@@ -133,7 +134,7 @@ const experiences = [
   {
     company: 'Purchasing Power',
     companyUrl: 'https://www.purchasingpower.com/',
-    role: 'Software Engineer',
+    role: 'Java Web Developer',
     duration: '05/2014 - 11/2014',
     contents: [
       'Develop and maintain an online J2EE B2C shopping web application using Hybris eCommerce Suite',
@@ -235,17 +236,16 @@ function App() {
         contentEditable
         className="mx-auto  mt-12 mb-40  flex w-[1100px] flex-col rounded-lg  bg-white py-12 px-20 shadow print:py-2 print:pt-4 print:shadow-none"
       >
-        <div className="mx-auto text-4xl font-bold">Yong Wang</div>
-        {!hideContact && (
-          <section className="flex items-baseline justify-between">
+        <div className="head flex items-center justify-between border-b border-gray-200 pb-8">
+          <section className="flex flex-col justify-between">
             <div>
-              <span className="text-sm font-semibold ">Phone:</span>
+              <span className="font-base text-sm ">Phone:</span>
               <span className="ml-2 text-sm text-indigo-500">
                 <a href="tel:+4237413382">423-741-3382</a>
               </span>
             </div>
             <div>
-              <span className="text-sm font-semibold ">Email:</span>
+              <span className="font-base text-sm ">Email:</span>
               <span className="ml-2 text-sm text-indigo-500">
                 <a href="mailto: yongwang.cs@gmail.com">
                   yongwang.cs@gmail.com
@@ -253,12 +253,28 @@ function App() {
               </span>
             </div>
           </section>
-        )}
-        <section className="mt-8 hidden flex-col">
-          <div className="title">Summary</div>
-          <p className="body-text mt-2">{summary}</p>
-        </section>
-        <section className="mt-8 flex flex-col">
+          <section className="flex flex-col items-baseline justify-between">
+            <div>
+              <span className="font-base text-sm ">About Me:</span>
+              <span className="ml-2 text-sm text-indigo-500">
+                <a href="http://yongwang.me">yongwang.me</a>
+              </span>
+            </div>
+            <div>
+              <span className="font-base text-sm ">LinkedIn:</span>
+              <span className="ml-2 text-sm text-indigo-500">
+                <a href="https://www.linkedin.com/in/yongwang-cs/">
+                  linkedin.com/in/yongwang-cs/
+                </a>
+              </span>
+            </div>
+          </section>
+          <div className="font-base absolute left-[50%] mx-auto translate-x-[-50%] text-4xl font-bold tracking-wider">
+            Yong Wang
+          </div>
+        </div>
+
+        <section className="mt-4 flex flex-col">
           <div className="title">Summary</div>
           <ul className="body-text mx-4 mt-2 grid grid-cols-2 font-medium text-gray-700">
             {highlights.map(it => (
