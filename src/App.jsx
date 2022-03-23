@@ -2,6 +2,18 @@ import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import {
+  AiOutlinePhone,
+  AiFillPhone,
+  AiOutlineLinkedin,
+  AiFillLinkedin,
+} from 'react-icons/ai';
+import { HiPhone } from 'react-icons/hi';
+import { MdEmail } from 'react-icons/md';
+import { SiAboutdotme } from 'react-icons/si';
+import { FiUser } from 'react-icons/fi';
+import { FaUser } from 'react-icons/fa';
+
 const highlights = [
   '10 years experience in software development',
   'Expert in Front End development',
@@ -210,12 +222,12 @@ function App() {
   return (
     <div className="min-h-screen print:h-screen">
       <div className="mt-10 flex w-full items-center justify-center gap-8 print:hidden">
-        <button
+        {/* <button
           className="btn border border-gray-200 bg-white text-lg text-indigo-600"
           onClick={() => setHideContact(!hideContact)}
         >
           {hideContact ? 'Show Contact Info' : 'Hide Contact Info'}
-        </button>
+        </button> */}
         <button className="btn btn-primary" onClick={() => window.print()}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -238,14 +250,14 @@ function App() {
       >
         <div className="head flex items-center justify-between border-b border-gray-200 pb-8">
           <section className="flex flex-col justify-between">
-            <div>
-              <span className="font-base text-sm ">Phone:</span>
+            <div className="flex items-center gap-1">
+              <AiFillPhone className="h-4 w-4 text-gray-600" />
               <span className="ml-2 text-sm text-indigo-500">
                 <a href="tel:+4237413382">423-741-3382</a>
               </span>
             </div>
-            <div>
-              <span className="font-base text-sm ">Email:</span>
+            <div className="flex items-center gap-1">
+              <MdEmail className="h-4 w-4 text-gray-600"></MdEmail>
               <span className="ml-2 text-sm text-indigo-500">
                 <a href="mailto: yongwang.cs@gmail.com">
                   yongwang.cs@gmail.com
@@ -254,14 +266,15 @@ function App() {
             </div>
           </section>
           <section className="flex flex-col items-baseline justify-between">
-            <div>
-              <span className="font-base text-sm ">About Me:</span>
+            <div className="flex items-center gap-1">
+              {/* <SiAboutdotme className="h-4 w-4"></SiAboutdotme> */}
+              <FaUser className="h-4 w-4 text-gray-600" />
               <span className="ml-2 text-sm text-indigo-500">
                 <a href="http://yongwang.me">yongwang.me</a>
               </span>
             </div>
-            <div>
-              <span className="font-base text-sm ">LinkedIn:</span>
+            <div className="flex items-center gap-1">
+              <AiFillLinkedin className="h-4 w-4 text-gray-600" />
               <span className="ml-2 text-sm text-indigo-500">
                 <a href="https://www.linkedin.com/in/yongwang-cs/">
                   linkedin.com/in/yongwang-cs/
